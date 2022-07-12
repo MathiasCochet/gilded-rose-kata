@@ -18,7 +18,7 @@ class ConjuredItemTest {
 
     @Test
     fun `Test that the sellIn property can go negative`() {
-        val item = AgingItem("Conjured Mana Cake", 2, quality = 10)
+        val item = ConjuredItem("Conjured Mana Cake", 2, quality = 10)
 
         Assertions.assertEquals(2, item.sellIn)
 
@@ -34,7 +34,7 @@ class ConjuredItemTest {
 
     @Test
     fun `Test if quality reduces by two if sellIn is positive`() {
-        val item = AgingItem("Conjured Mana Cake", 2, quality = 10)
+        val item = ConjuredItem("Conjured Mana Cake", 2, quality = 10)
 
         Assertions.assertEquals(10, item.quality)
 
@@ -45,7 +45,7 @@ class ConjuredItemTest {
 
     @Test
     fun `Test if quality is reduced by 4 if sellIn is negative`() {
-        val item = AgingItem("Conjured Mana Cake", -1, quality = 10)
+        val item = ConjuredItem("Conjured Mana Cake", -1, quality = 10)
 
         Assertions.assertEquals(10, item.quality)
 
@@ -56,7 +56,7 @@ class ConjuredItemTest {
 
     @Test
     fun `Test if sellIn reaches 0, the quality only reduces by 2`() {
-        val item = AgingItem("Conjured Mana Cake", 1, quality = 10)
+        val item = ConjuredItem("Conjured Mana Cake", 1, quality = 10)
 
         Assertions.assertEquals(10, item.quality)
 
@@ -67,7 +67,7 @@ class ConjuredItemTest {
 
     @Test
     fun `Test if quality does not become negative`() {
-        val item = AgingItem("Conjured Mana Cake", -1, quality = 4)
+        val item = ConjuredItem("Conjured Mana Cake", -1, quality = 4)
 
         Assertions.assertEquals(4, item.quality)
 

@@ -2,14 +2,21 @@ package com.gildedrose.items
 
 import com.gildedrose.Actions
 import com.gildedrose.items.base.Item
+import com.gildedrose.reduceQualityBy
+import com.gildedrose.reduceSellInDate
+import com.gildedrose.sellInDatePassed
 
 class ConjuredItem(name: String, sellIn: Int, quality: Int): Item(name, sellIn, quality), Actions {
     override fun calculateItemSellIn() {
-        TODO("Not yet implemented")
+        reduceSellInDate(this, 1)
     }
 
     override fun calculateItemQuality() {
-        //calc
+        if (sellInDatePassed(sellIn)) {
+            reduceQualityBy(this, 4)
+        } else {
+            reduceQualityBy(this, 2)
+        }
     }
 
 }
