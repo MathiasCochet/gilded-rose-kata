@@ -1,5 +1,7 @@
 package com.gildedrose
 
+import com.gildedrose.items.base.Item
+
 class GildedRose(var items: Array<Item>) {
 
     fun updateQuality() {
