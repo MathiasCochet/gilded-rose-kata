@@ -8,7 +8,7 @@ internal class GildedRoseTest {
 
     @Test
     fun foo() {
-        val items = arrayOf(Item("foo", 0, 0))
+        val items = arrayListOf(Item("foo", 0, 0))
         val app = GildedRose(items)
         app.updateQuality()
         val firstItem = app.items.first()
