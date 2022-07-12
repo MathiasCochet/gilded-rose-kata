@@ -8,7 +8,7 @@ class TicketItem(name: String, sellIn: Int, quality: Int): Item(name, sellIn, qu
         TODO("Not yet implemented")
     }
 
-    override fun calculateItemQuality(item: Item) {
+    override fun calculateItemQuality() {
         // calc
     }
 }

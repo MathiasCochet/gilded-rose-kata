@@ -9,7 +9,7 @@ class LegendaryItem(name: String, sellIn: Int, quality: Int): Item(name, sellIn,
         //Legendary items don't degrade.
     }
 
-    override fun calculateItemQuality(item: Item) {
+    override fun calculateItemQuality() {
         //test
     }
 }

@@ -8,7 +8,7 @@ class AgingItem(name: String, sellIn: Int, quality: Int): Item(name, sellIn, qua
         TODO("Not yet implemented")
     }
 
-    override fun calculateItemQuality(item: Item) {
+    override fun calculateItemQuality() {
        // calc
     }
 }
