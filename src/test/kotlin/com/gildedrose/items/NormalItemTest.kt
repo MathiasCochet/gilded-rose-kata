@@ -67,4 +67,21 @@ internal class NormalItemTest {
 
         assertEquals(9, item.quality)
     }
+
+    @Test
+    fun `Test if quality does not become negative`() {
+        val item = NormalItem("Normal Item", -1, quality = 2)
+
+        assertEquals(2, item.quality)
+
+        item.calculateItemSellIn()
+        item.calculateItemQuality()
+
+        assertEquals(0, item.quality)
+
+        item.calculateItemSellIn()
+        item.calculateItemQuality()
+
+        assertEquals(0, item.quality)
+    }
 }

@@ -41,7 +41,7 @@ internal class AgingItemTest {
         item.calculateItemSellIn()
         item.calculateItemQuality()
 
-        Assertions.assertEquals(1, item.quality)
+        Assertions.assertEquals(11, item.quality)
     }
 
     @Test
