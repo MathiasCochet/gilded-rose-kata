@@ -9,7 +9,7 @@ open class Item(var name: String, var sellIn: Int, var quality: Int) {
     }
 }
 
-fun Item.updateItem() {
+fun Item.update() {
     if(this is Actions) {
         this.calculateItemSellIn()
         this.calculateItemQuality()
