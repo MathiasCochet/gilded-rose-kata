@@ -1,5 +1,6 @@
 package com.gildedrose.items.base
 
+import com.gildedrose.Actions
 import com.gildedrose.items.*
 
 open class Item(var name: String, var sellIn: Int, var quality: Int) {
@@ -8,6 +9,14 @@ open class Item(var name: String, var sellIn: Int, var quality: Int) {
     }
 }
 
+fun Item.updateItem() {
+    if(this is Actions) {
+        this.calculateItemSellIn()
+        this.calculateItemQuality()
+    }else{
+        throw IllegalStateException("This type of item is not implemented.")
+    }
+}
 
 fun Item.map(): Item{
     return when(this.name) {
