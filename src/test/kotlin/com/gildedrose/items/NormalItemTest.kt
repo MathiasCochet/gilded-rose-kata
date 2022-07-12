@@ -39,6 +39,7 @@ internal class NormalItemTest {
         assertEquals(10, item.quality)
 
         item.calculateItemSellIn()
+        item.calculateItemQuality()
 
         assertEquals(9, item.quality)
     }
@@ -50,6 +51,7 @@ internal class NormalItemTest {
         assertEquals(10, item.quality)
 
         item.calculateItemSellIn()
+        item.calculateItemQuality()
 
         assertEquals(8, item.quality)
     }
@@ -61,6 +63,7 @@ internal class NormalItemTest {
         assertEquals(10, item.quality)
 
         item.calculateItemSellIn()
+        item.calculateItemQuality()
 
         assertEquals(9, item.quality)
     }
