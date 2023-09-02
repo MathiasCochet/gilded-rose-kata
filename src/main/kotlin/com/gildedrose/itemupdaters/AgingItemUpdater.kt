@@ -7,5 +7,9 @@ class AgingItemUpdater : BaseItemUpdater() {
 
     override fun updateItem(item: Item) {
         super.updateItem(item)
+
+        if (item.quality < MAX_QUALITY) {
+            item.quality += 1
+        }
     }
 }
