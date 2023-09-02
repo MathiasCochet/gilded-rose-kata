@@ -1,4 +1,4 @@
-package com.gildedrose.itemupdaters
+package com.gildedrose.itemupdaters.base
 
 import com.gildedrose.Item
 
