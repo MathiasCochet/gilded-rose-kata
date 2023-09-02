@@ -6,10 +6,10 @@ import com.gildedrose.itemupdaters.base.BaseItemUpdater
 class AgingItemUpdater : BaseItemUpdater() {
 
     override fun updateItem(item: Item) {
-        super.updateItem(item)
-
         if (item.quality < MAX_QUALITY) {
             item.quality += 1
         }
+
+        super.updateItem(item)
     }
 }
