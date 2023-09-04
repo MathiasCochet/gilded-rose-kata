@@ -4,7 +4,7 @@ import com.gildedrose.Item
 import com.gildedrose.itemupdaters.base.ItemType
 import com.gildedrose.itemupdaters.base.ItemUpdater
 
-object ItemUpdaterSelector {
+object ItemUpdaterFactory {
 
     fun getItemUpdater(item: Item): ItemUpdater {
         return when (item.name) {
