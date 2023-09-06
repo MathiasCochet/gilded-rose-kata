@@ -59,4 +59,24 @@ class DefaultItemUpdaterTest {
 
         Assertions.assertEquals(0, item.quality)
     }
+
+    @Test
+    fun `Test passing the sellIn date`() {
+        val item = Item("Default Item", 2, 10)
+
+        defaultItemUpdater.updateItem(item)
+
+        Assertions.assertEquals(1, item.sellIn)
+        Assertions.assertEquals(9, item.quality)
+
+        defaultItemUpdater.updateItem(item)
+
+        Assertions.assertEquals(0, item.sellIn)
+        Assertions.assertEquals(8, item.quality)
+
+        defaultItemUpdater.updateItem(item)
+
+        Assertions.assertEquals(-1, item.sellIn)
+        Assertions.assertEquals(6, item.quality)
+    }
 }
