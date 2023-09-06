@@ -34,12 +34,21 @@ internal class AgingItemUpdaterTest {
     }
 
     @Test
-    fun `When running the updateItem function for an aging item with a negative sellIn the quality should still increase by 1`() {
+    fun `When running the updateItem function for an aging item with a negative sellIn the quality should  increase by 2`() {
         val item = Item("Aging Item", -2, 10)
 
         agingItemUpdater.updateItem(item)
 
-        assertEquals(11, item.quality)
+        assertEquals(12, item.quality)
+    }
+
+    @Test
+    fun `When running the updateItem function for an aging item with a negative sellin the quality should increase by 2 up until a quality of 50 is reached`() {
+        val item = Item("Aging Item", -2, 49)
+
+        agingItemUpdater.updateItem(item)
+
+        assertEquals(50, item.quality)
     }
 
     @Test
