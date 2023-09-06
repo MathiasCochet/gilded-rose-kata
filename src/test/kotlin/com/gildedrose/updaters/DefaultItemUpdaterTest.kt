@@ -2,7 +2,7 @@ package com.gildedrose.updaters
 
 import com.gildedrose.Item
 import com.gildedrose.itemupdaters.DefaultItemUpdater
-import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
@@ -21,7 +21,7 @@ class DefaultItemUpdaterTest {
 
         defaultItemUpdater.updateItem(item)
 
-        Assertions.assertEquals(9, item.sellIn)
+        assertEquals(9, item.sellIn)
     }
 
     @Test
@@ -30,7 +30,7 @@ class DefaultItemUpdaterTest {
 
         defaultItemUpdater.updateItem(item)
 
-        Assertions.assertEquals(9, item.quality)
+        assertEquals(9, item.quality)
     }
 
     @Test
@@ -39,7 +39,7 @@ class DefaultItemUpdaterTest {
 
         defaultItemUpdater.updateItem(item)
 
-        Assertions.assertEquals(8, item.quality)
+        assertEquals(8, item.quality)
     }
 
     @Test
@@ -48,7 +48,7 @@ class DefaultItemUpdaterTest {
 
         defaultItemUpdater.updateItem(item)
 
-        Assertions.assertEquals(0, item.quality)
+        assertEquals(0, item.quality)
     }
 
     @Test
@@ -57,7 +57,7 @@ class DefaultItemUpdaterTest {
 
         defaultItemUpdater.updateItem(item)
 
-        Assertions.assertEquals(0, item.quality)
+        assertEquals(0, item.quality)
     }
 
     @Test
@@ -66,17 +66,17 @@ class DefaultItemUpdaterTest {
 
         defaultItemUpdater.updateItem(item)
 
-        Assertions.assertEquals(1, item.sellIn)
-        Assertions.assertEquals(9, item.quality)
+        assertEquals(1, item.sellIn)
+        assertEquals(9, item.quality)
 
         defaultItemUpdater.updateItem(item)
 
-        Assertions.assertEquals(0, item.sellIn)
-        Assertions.assertEquals(8, item.quality)
+        assertEquals(0, item.sellIn)
+        assertEquals(8, item.quality)
 
         defaultItemUpdater.updateItem(item)
 
-        Assertions.assertEquals(-1, item.sellIn)
-        Assertions.assertEquals(6, item.quality)
+        assertEquals(-1, item.sellIn)
+        assertEquals(6, item.quality)
     }
 }
